@@ -1,82 +1,74 @@
-/* -------------global style---------------*/
-html {
-  font-size: 1rem;
+* {
+  margin: 0;
+  padding: 0; 
 }
-body {
-    background-color: #efefef; 
-    font-family: 'Open Sans', sans-serif;
-    color: #1b1d1e;
-    line-height: 1.5;
-    margin: 0; 
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #cebf93;
+  background-size: 64px 128px; 
+  font-family: 'Open Sans', sans-serif;
 }
-p {
+
+.main .container {
+  height: 540px;
+  width: 900px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-self: center;
+  position: relative; 
+  box-shadow: 2px 2px 10px; 
+}
+
+.main .container #title {
   text-align: center;
-  font-size: 1rem;
+  font-size: 2.3em; 
 }
-a {
-  text-decoration: none;
+
+.main .container .visHolder {
+  position: absolute;
+  top: 6em; 
 }
-a:hover {
-  font-weight: bold;
-}
-/* -------------header & pic---------------*/
-h1 {
-  text-align: center; 
-}
-img {
-  max-width: 100%;
-  display: block;
-  height: auto;
-  margin: 0 auto;
-}
-img+p {
-  font-size: 0.9rem;
-}
-/* -------------main---------------*/
-h2 {
-  font-size: 1.1rem; 
+
+#tooltip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
   text-align: center;
+  width: 150px;
+  height: 50px;
+  padding: 2px;
+  font: 12px;
+  background: rgb(235, 230, 161);
+  box-shadow: 1px 1px 10px;
+  border-radius: 2px;
 }
-ul {
-  list-style: none;
-  width: 38em;
-  margin: 10px auto 30px auto;
+
+.overlay {
+  position: absolute;
+  background: rgb(235, 230, 161);
+  pointer-events: none; 
 }
-.year {
-  font-weight: bold;
+
+#y-axis path {
+  stroke: black;
+  stroke-width: 1;
+  fill: none; 
 }
-ul+p {
-  font-weight: 700;
+
+#x-axis path {
+  stroke: black;
+  stroke-width: 1;
+  fill: none; 
 }
-ul~p {
-  color: #0e4f7a;
-  font-style: italic;
-}
-h3 {
-  text-align: center;
-  font-size: 1.2rem;
-  margin-top: 30px;
-}
-/* -------------footer---------------*/
-footer p {
-  background-color: #a98f4a;
-  color: #3d062f;
-  font-size: 0.85rem;
-  margin-bottom: 0; 
-}
-/* -----------responsive-------------*/
-@media (max-width:712px) {
-  html {
-    font-size: 0.85rem;
-  }
-  h1 {
-    line-height: 1;
-  }
-  
-  ul {width: 80vw;
-      margin: 0 auto;
-  }
-  img {
-    max-width: 80%;
-  }
+
+.info {
+  font-size: 0.7em; 
 }
